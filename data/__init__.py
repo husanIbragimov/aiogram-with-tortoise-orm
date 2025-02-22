@@ -1,1 +1,1 @@
-from . import subloader, config_reader
+from . import subloader, config

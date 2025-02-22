@@ -1,7 +1,7 @@
 from typing import Any, Awaitable, Callable, Dict
 from aiogram import BaseMiddleware
 from aiogram.types import Message
-from data.config_reader import CHANNEL_ID, ADMIN_ID
+from data.config import CHANNEL_ID, ADMIN_ID
 from aiogram.exceptions import TelegramBadRequest, TelegramForbiddenError
 from keyboards.builders import check_channel_sub
 

@@ -2,3 +2,4 @@ aiogram~=3.18.0
 python-dotenv~=1.0.1
 ujson~=5.10.0
 cachetools~=5.5.2
+tortoise-orm[asyncpg]~=0.24.0

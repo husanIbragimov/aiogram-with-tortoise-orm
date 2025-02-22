@@ -1,6 +1,8 @@
 from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
-from data.config_reader import BOT_TOKEN
+from tortoise import Tortoise
+from data.config import BOT_TOKEN, DATABASE_CONFIG
+
 
 bot = Bot(
     token=BOT_TOKEN, 
@@ -8,3 +10,7 @@ bot = Bot(
 )
 
 dp = Dispatcher()
+
+async def init_db():
+    await Tortoise.init(config=DATABASE_CONFIG)
+    await Tortoise.generate_schemas()

@@ -1,6 +1,6 @@
 import asyncio
 import signal
-from handlers import bot_messages, user_commands, questionaire
+from handlers import bot_messages, user_commands, questionaire, start
 from callbaks import pagination
 from middlewares.throttling import ThrottlingMiddleware
 from utils.bot_stop import on_shutdown_notify
@@ -10,13 +10,16 @@ from utils.set_bot_commands import (
     set_group_defoult_commands
 )
 from utils.bot_start import on_startup_notify
-from loader import bot, dp
+from loader import bot, dp, init_db
 
 
 async def main():
+    await init_db()  
+
     dp.message.middleware(ThrottlingMiddleware())
 
     dp.include_routers(
+        start.router,
         user_commands.router,
         questionaire.router,
         pagination.router,

@@ -26,7 +26,7 @@
 │   ├── __init__.py
 │   └── pagination.py
 ├── data
-│   ├── config_reader.py
+│   ├── config.py
 │   ├── __init__.py
 │   ├── smiles.json
 │   └── subloader.py
@@ -65,7 +65,7 @@
     ├── set_bot_commands.py
     ├── db
     │   ├── __init__.py
-    │   └── postgres.py
+    │   └── models.py
     └── states.py
 ```
 #

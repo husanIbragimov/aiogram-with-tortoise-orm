@@ -1,6 +1,6 @@
 import logging
 from loader import bot
-from data.config_reader import ADMIN_ID
+from data.config import ADMIN_ID
 
 async def on_startup_notify():
     bot_ = await bot.me()
