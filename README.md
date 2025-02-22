@@ -126,3 +126,15 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
+
+
+
+- install req
+- write model
+- write this to shell:
+  - `aerich init -t data.config.DATABASE_CONFIG`
+  - `aerich init-db`
+
+- when update model or create new model, should be migrate and db upgrade, like this:
+  - `aerich migrate`   -  this command create migrations
+  - `aerich upgrade`   -  this command migrate to db

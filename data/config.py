@@ -23,7 +23,7 @@ DATABASE_CONFIG = {
     },
     "apps": {
         "models": {
-            "models": ["utils.db.models"],  # Model fayllari qayerda joylashgan bo‘lsa, shuni yozing
+            "models": ["utils.db.models",  "aerich.models"],  
             "default_connection": "default",
         }
     }
