@@ -1,13 +1,10 @@
 import asyncio
-import signal
-from handlers import bot_messages, user_commands, questionaire, start
+from handlers.users import questionaire, user_commands, bot_messages, start
 from callbaks import pagination
 from middlewares.throttling import ThrottlingMiddleware
 from utils.bot_stop import on_shutdown_notify
 from utils.set_bot_commands import (
-    set_private_default_commands, 
-    set_adminstrators_defoult_commands,
-    set_group_defoult_commands
+    set_private_default_commands
 )
 from utils.bot_start import on_startup_notify
 from loader import bot, dp, init_db

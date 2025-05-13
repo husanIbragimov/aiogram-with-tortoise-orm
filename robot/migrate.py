@@ -1,7 +1,7 @@
 import asyncio
 from tortoise import Tortoise
 
-from data.config import DATABASE_CONFIG
+from data import DATABASE_CONFIG
 
 async def apply_migrations():
     await Tortoise.init(
